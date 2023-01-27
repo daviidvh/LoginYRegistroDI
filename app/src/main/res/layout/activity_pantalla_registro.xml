@@ -6,85 +6,122 @@
     android:layout_height="match_parent"
     tools:context=".pantallaRegistro">
 
-
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="54dp"
-        android:layout_height="22dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="504dp"
-        android:text="M"
+    <TableLayout
+        android:layout_width="333dp"
+        android:layout_height="652dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="35dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="146dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:gravity="right"
-        android:text="Sexo:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/radioButton"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="145dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="96dp"
-        android:gravity="right"
-        android:text="Nombre de usuario:"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="193dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="193dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="146dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:gravity="right"
-        android:text="Contraseña:"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="53dp"
-        android:layout_height="21dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="508dp"
-        android:text="H"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/radioButton2" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
 
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="154dp"
+                android:layout_height="57dp"
+                android:gravity="center|right"
+                android:text="Nombre Usuario:" />
+
+            <EditText
+                android:id="@+id/nomUsu"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="154dp"
+                android:layout_height="57dp"
+                android:gravity="center|right"
+                android:text="Contraseña:" />
+
+            <EditText
+                android:id="@+id/contrasenia"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="154dp"
+                android:layout_height="57dp"
+                android:gravity="center|right"
+                android:text="Sexo:" />
+
+            <RadioGroup
+                android:id="@+id/grbGrupo1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbOpcion1"
+                    android:layout_width="65dp"
+                    android:layout_height="26dp"
+                    android:text="H" />
+
+                <RadioButton
+                    android:id="@+id/rbOpcion2"
+                    android:layout_width="77dp"
+                    android:layout_height="24dp"
+                    android:text="M" />
+            </RadioGroup>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="154dp"
+                android:layout_height="57dp"
+                android:gravity="center|right"
+                android:text="Nacionalidad:" />
+
+            <Spinner
+                android:id="@+id/spinnerNacionalidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/nacionalidad"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="154dp"
+                android:layout_height="57dp"
+                android:gravity="center|right"
+                android:text="Aficiones:" />
+
+        </TableRow>
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

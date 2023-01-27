@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">[Task 08] GUI Login y Registro</string>
+    <string-array name="nacionalidad">
+        <item>Español</item>
+        <item>Peruano</item>
+        <item>Frances</item>
+        <item>Aleman</item>
+    </string-array>
+
 </resources>
