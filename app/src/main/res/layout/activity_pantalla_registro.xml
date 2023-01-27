@@ -4,17 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="1"
     tools:context=".pantallaRegistro">
 
-    <TableLayout
-        android:layout_width="333dp"
-        android:layout_height="652dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="35dp"
-        android:gravity="center"
+    <EditText
+        android:id="@+id/edTresumen"
+        android:layout_width="262dp"
+        android:layout_height="129dp"
+        android:background="@drawable/shape"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="372dp"
+        android:layout_height="326dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="60dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -28,7 +42,7 @@
                 android:layout_width="154dp"
                 android:layout_height="57dp"
                 android:gravity="center|right"
-                android:text="Nombre Usuario:" />
+                android:text="@string/nombreUsu" />
 
             <EditText
                 android:id="@+id/nomUsu"
@@ -47,7 +61,7 @@
                 android:layout_width="154dp"
                 android:layout_height="57dp"
                 android:gravity="center|right"
-                android:text="Contraseña:" />
+                android:text="@string/contrase" />
 
             <EditText
                 android:id="@+id/contrasenia"
@@ -65,26 +79,29 @@
                 android:layout_width="154dp"
                 android:layout_height="57dp"
                 android:gravity="center|right"
-                android:text="Sexo:" />
+                android:text="@string/sexo" />
 
             <RadioGroup
                 android:id="@+id/grbGrupo1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_gravity="left"
+                android:gravity="center|left"
                 android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/rbOpcion1"
                     android:layout_width="65dp"
                     android:layout_height="26dp"
-                    android:text="H" />
+                    android:foregroundGravity="left"
+                    android:text="@string/rBotonH" />
 
                 <RadioButton
                     android:id="@+id/rbOpcion2"
                     android:layout_width="77dp"
                     android:layout_height="24dp"
-                    android:text="M" />
+                    android:foregroundGravity="left"
+                    android:text="@string/rBotonM" />
             </RadioGroup>
 
         </TableRow>
@@ -99,19 +116,19 @@
                 android:layout_width="154dp"
                 android:layout_height="57dp"
                 android:gravity="center|right"
-                android:text="Nacionalidad:" />
+                android:text="@string/nacionalidad" />
 
             <Spinner
                 android:id="@+id/spinnerNacionalidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/nacionalidad"/>
+                android:entries="@array/nacionalidad" />
 
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="324dp"
+            android:layout_height="58dp"
             android:gravity="center">
 
             <TextView
@@ -119,9 +136,87 @@
                 android:layout_width="154dp"
                 android:layout_height="57dp"
                 android:gravity="center|right"
-                android:text="Aficiones:" />
+                android:text="@string/aficiones" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/afTenis"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:text="@string/aficiTenis" />
+
+                <CheckBox
+                    android:id="@+id/afFutbol"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:text="@string/aficiFutbol" />
+            </LinearLayout>
 
         </TableRow>
+
+        <TableRow
+            android:layout_width="324dp"
+            android:layout_height="58dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="175dp"
+                android:layout_height="30dp"
+                android:gravity="center|right"
+                android:text="@string/cv" />
+
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="30dp" />
+
+        </TableRow>
+
+
     </TableLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="37dp"
+        android:layout_height="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.375"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="88dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="88dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

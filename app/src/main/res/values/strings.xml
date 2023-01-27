@@ -1,10 +1,24 @@
 <resources>
     <string name="app_name">[Task 08] GUI Login y Registro</string>
+
+
+    <string name="nombreUsu">Nombre Usuario:</string>
+    <string name="contrase">Contraseña:</string>
+    <string name="sexo">Sexo:</string>
+    <string name="rBotonH">H</string>
+    <string name="rBotonM">M</string>
+    <string name="nacionalidad">Nacionalidad:</string>
+
     <string-array name="nacionalidad">
         <item>Español</item>
         <item>Peruano</item>
         <item>Frances</item>
         <item>Aleman</item>
     </string-array>
+    <string name="aficiones">Aficiones</string>
+    <string name="aficiFutbol">Fútbol</string>
+    <string name="aficiTenis">Tenis</string>
+    <string name="cv">CV resumido:</string>
+
 
 </resources>
