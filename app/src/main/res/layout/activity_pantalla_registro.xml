@@ -9,8 +9,8 @@
 
     <EditText
         android:id="@+id/edTresumen"
-        android:layout_width="262dp"
-        android:layout_height="129dp"
+        android:layout_width="247dp"
+        android:layout_height="130dp"
         android:background="@drawable/shape"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,8 +22,8 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="372dp"
-        android:layout_height="326dp"
+        android:layout_width="319dp"
+        android:layout_height="318dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="60dp"
         android:gravity="center"
@@ -46,7 +46,7 @@
 
             <EditText
                 android:id="@+id/nomUsu"
-                android:layout_width="137dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content" />
 
         </TableRow>
@@ -186,7 +186,7 @@
     </TableLayout>
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imgBotonCerrar"
         android:layout_width="37dp"
         android:layout_height="34dp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
@@ -198,25 +198,25 @@
         app:srcCompat="@android:drawable/ic_delete" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/botonRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="92dp"
+        android:layout_marginEnd="80dp"
         android:layout_marginBottom="88dp"
-        android:text="Button"
+        android:text="Registrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/botonCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginBottom="88dp"
-        android:text="Button"
+        android:text="Cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintEnd_toStartOf="@+id/botonRegistrar"
+        app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
