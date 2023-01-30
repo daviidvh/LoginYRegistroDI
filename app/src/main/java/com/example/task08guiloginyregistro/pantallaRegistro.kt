@@ -21,7 +21,12 @@ class pantallaRegistro : AppCompatActivity() {
         }
 
         binding.botonRegistrar.setOnClickListener {
-            val intent= Intent(this, pantallaRegistro::class.java)
+
+            val usuarios = arrayListOf<String>()
+            usuarios.add(binding.nomUsu.text.toString())
+            println(usuarios.toString())
+            val intent= Intent(this, MainActivity::class.java)
+            intent.putExtra("array",usuarios.toString())
             startActivity(intent)
         }
 
